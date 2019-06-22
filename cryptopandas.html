@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CryptoPandas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="cryptopandas.js"></script>
+	<script src="cryptopandas_abi.js"></script>
+</head>
+
+<body>
+	<div class="logo">
+		<h1>CryptoPandas</h1>
+		<p>Because Pandas are awesome</p>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li id="mode-mining" onclick="changeMode('mining')">Mine Pandas</li>
+			<li id="mode-breeding" onclick="changeMode('breeding')">Breed Pandas</li>
+		</ul>
+	</div>
+
+
+	<noscript>Please enable JavaScript to use this service!</noscript>
+
+	<div class="logged-out">
+		<p id="login-prompt">Login using MetaMask to proceed!</p>
+	</div>
+	<br>
+
+	<div class="logged-in">
+		<p id="account">Account: </p>
+		<p>Your Cards:</p>
+		<div class="card-wrapper" align="center">
+			<!--<div class="card overlay">
+				<img class="frame" src="images/frame.png">
+				<img class="panda" src="images/panda.png">
+				<p class="name">Panda 1</p>
+				<div class="selected"></div>
+			</div>-->
+		</div>
+
+		<div class="mining-wrapper">
+			<p>Mine Panda:</p>
+			<input type="text" placeholder="The name of your Panda" id="minePandaName">
+			<input type="text" placeholder="Your mined nonce" id="minePandaNonce">
+			<input type="submit" value="Mine!" id="minePandaButton" onclick="minePanda();">
+		</div>
+		<div class="breeding-wrapper">
+			<p>Breed Pandas</p>
+			<input type="text" placeholder="The name of your Panda" id="breedPandaName">
+			<input type="submit" value="Breed!" id="breedPandaButton" onclick="breedPandas();">
+		</div>
+	</div>
+</body>
+</html>

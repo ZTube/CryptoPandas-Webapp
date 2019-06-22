@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #263238;
+	color: white;
+	font-family: Rubik, sans-serif;
+	word-wrap: break-word;
+}
+
+.logo {
+	padding: 5px;
+	margin: 10px auto;
+	border: 3px solid white;
+	border-radius: 5px;
+	text-align: center;
+	width: 310px;
+}
+
+.logo h1 {
+	text-transform: uppercase;
+}
+
+.navbar {
+	display: block;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background: #263238;
+	padding: 10px;
+	z-index: 99;
+	box-shadow: 0px 10px 10px -10px #263238;
+}
+
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar li {
+	display: inline;
+	padding: 10px;
+	cursor:	pointer;
+}
+
+.navbar li:hover {
+	background-color: #607D8B;
+}
+
+.navbar .active {
+	background-color: #455A64;
+}
+
+
+
+
+
+
+.logged-out {
+	display: none;
+}
+
+.logged-in {
+	display: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	background: #37474F;
+}
+
+.mining-wrapper {
+	display: none;
+	margin: 10px;
+	padding: 10px;
+}
+
+.mining-wrapper input {
+	transition: .5s ease;
+	border: 2px solid #37474F;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.breeding-wrapper {
+	display: none;
+	margin: 10px;
+	padding: 10px;
+}
+
+.breeding-wrapper input {
+	transition: .5s ease;
+	border: 2px solid #37474F;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.success {
+	background: #4CAF50;
+	color: #ffffff;
+	transition: .5s ease;
+}
+
+.failure {
+	background: #FF5722;
+	color: #ffffff;
+	transition: .5s ease;
+
+}
+
+.pending {
+	background: #1976D2;
+	color: #ffffff;
+	transition: .5s ease;
+}
+
+
+.card-wrapper {
+	margin: 10px;
+	border-radius: 5px;
+	background: #455A64;
+}
+
+.card {
+	display: inline-block;
+	width: 200px;
+	height: 240px;
+	position: relative;
+	margin: 10px;
+	cursor:	pointer;
+}
+
+.card:hover .hovered {
+	opacity: 0.5;
+}
+
+.hovered {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	border: 2px solid #263238;
+	border-radius: 10px;
+	opacity: 0;
+	transition: .2s ease;
+	background-color: #607D8B;
+}
+
+.selected {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 8px dotted #90A4AE;
+	border-radius: 10px;
+	background-color: #ECEFF120;
+}
+
+
+
+
+.frame {
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 0px;
+	left: 0px;
+}
+
+.panda {
+	position: absolute;
+	width: 30%;
+	height: auto;
+
+	bottom: 26%;
+	left: 2%;
+}
+
+.name {
+	position: absolute;
+	top: 4%;
+	left: 52%;
+	font-family: Niconne, sans-serif;
+}
+
+.gen {
+	position: absolute;
+	bottom: 4%;
+	right: 0%;
+	width: 60px;
+	text-align: center;
+	font-size: xx-large;
+}
