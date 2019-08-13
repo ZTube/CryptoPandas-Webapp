@@ -1,4 +1,4 @@
-const cryptoPandasAddress = "0xf91f0ab473a92661204fa34f8f1c748e0a8fc011";
+const cryptoPandasAddress = "0xc25582935e4dffb943b3f7715c764bdcc7d81052";
 var cryptoPandasContract;
 var cryptoPandas;
 
@@ -24,16 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		cryptoPandasContract = web3js.eth.contract(cryptoPandasABI);
 		cryptoPandas = cryptoPandasContract.at(cryptoPandasAddress);
-
-		/*cryptoPandas.getPandasOfOwner(web3js.eth.defaultAccount, function(error, result){
-			console.log(JSON.stringify(result));
-				
-			for(var panda in result) {
-				cryptoPandas.pandas(panda, function(error, result){
-					displayPanda(card_wrapper, panda, result[0], result[1].toString(16));
-				});
-				}
-		});*/
 
 		var pandaCreated = cryptoPandas.PandaCreated({ owner: web3js.eth.defaultAccount}, {fromBlock: 0, toBlock: 'latest'});
 		pandaCreated.watch(function(error, result){
